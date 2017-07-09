@@ -30,7 +30,7 @@ print('title of the page : '+driver.title)
 # enter "key word" in textbox to search it
 input_box = driver.find_element_by_id('lst-ib')
 input_box.send_keys('jenkins')
-driver.find_element_by_tag_name('svg').send_keys(Keys.RETURN)
+input_box.send_keys(Keys.ENTER)
 
 # スクリーンショット撮影
 #driver.save_screenshot('02_searchResult.png')
