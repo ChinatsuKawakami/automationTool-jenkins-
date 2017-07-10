@@ -1,8 +1,9 @@
 #!/bin/bash -ex
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
-
-#import lxml.html
+from selenium.webdriver.common.by import By
+import time
+import lxml.html
 
 
 #def main():
@@ -36,17 +37,23 @@ input_box.send_keys(Keys.ENTER)
 
 # click one of the result
 
-click_jenkins = input_box.get
-jenkins_url = 'https://jenkins.io/'
-input_box.find_element_by_link_text("Jenkins").send_keys('\n')
+
+#jenkins_url='/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;cad=rja&amp;uact=8&amp;ved=0ahUKEwjFktvwu_3UAhWr5oMKHRoSAIAQFggiMAA&amp;url=https%3A%2F%2Fjenkins.io%2F&amp;usg=AFQjCNHwOJU-lmtmG89TB7bVdt1VJu8R8A'
+#input_box.find_element(By.LINK_TEXT('Images')).click()
+#elements = driver.find_element_by_tag_name('h3')
+#for element in elements:
+#    if element.text == "Jenkins":
+ #       element.click()
+#jenk = input_box.find_element_by_class_name('r')
+input_box.find_element_by_xpath('//*[@id="hdtb-msb-vis"]/div[2]/a').click()
+# wait 5 sec
+time.sleep(5)
+#take the screen shot
+input_box.save_screenshot('@C:/Users/chinatsu/PycharmProjects/automation/02_screenshot.png')
+
+driver.close()
 
 
-
-
-
-
-# take the screen shot
-#input_box.save_screenshot('@C:\Program Files (x86)\Jenkins\01_screenshot.png')
 
 #if __name__ == '__main__':
  #   main()
