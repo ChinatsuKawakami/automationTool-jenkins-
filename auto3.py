@@ -45,7 +45,9 @@ input_box.send_keys(Keys.ENTER)
 #    if element.text == "Jenkins":
  #       element.click()
 #jenk = input_box.find_element_by_class_name('r')
-input_box.find_element_by_xpath('//*[@id="hdtb-msb-vis"]/div[2]/a').click()
+#element =input_box.find_element_by_xpath('//*[@id="hdtb-msb-vis"]/div[2]/a')
+element =input_box.find_element_by_class_name('hdtb-mitem hdtb-msel hdtb-imb')
+element.click()
 # wait 5 sec
 time.sleep(5)
 #take the screen shot
